@@ -44,7 +44,7 @@ Flatten Blizzard’s nested data model into a **clean analytical table** where e
    This increased data granularity from run-level to player-level.
 
  3. **Feature Engineering**
-   Converted milliseconds to minutes for run durations.
+    Converted milliseconds to minutes for run durations.
    Mapped roles, classes, and regions.
    Cleaned invalid or null records.
    
