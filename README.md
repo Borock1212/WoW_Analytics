@@ -43,13 +43,13 @@ Flatten Blizzard’s nested data model into a **clean analytical table** where e
    UNNEST(run.weekly_modifiers) AS modifier
    This increased data granularity from run-level to player-level.
 
- 3. **Feature Engineering**
+ 3. **Feature Engineering** <br>
     Converted milliseconds to minutes for run durations.
    Mapped roles, classes, and regions.
    Cleaned invalid or null records.
    
 
- 5. Exporting
+ 5. **Exporting** <br>
    Saved final results to a new table:
    CREATE OR REPLACE TABLE WoW_DATA.tww_1_season_2000_filtered
    Then exported to .csv for Tableau visualization.
