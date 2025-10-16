@@ -1,11 +1,11 @@
-# 🧙‍♂️ WoW Analytics: Mythic+ Season TWW1 (EU & US)
+# WoW Analytics: Mythic+ Season TWW1 (EU & US)
 
 An interactive **Tableau Dashboard** built using data from **World of Warcraft: The War Within (Season 1)**.  
 This analysis explores class popularity, specialization trends, dungeon performance, and faction distribution in **Mythic+** runs.
 
 ---
 
-## 📊 Project Overview
+## Project Overview
 
 The dataset was extracted from the **Raider.io** and processed through **Google BigQuery**.  
 After applying `UNNEST` operations, the dataset expanded from ~4,000 grouped entries to more than **80,000 individual rows**,  
@@ -16,7 +16,7 @@ balance, performance, and class popularity within the first season of *The War W
 
 ---
 
-## ⚙️ Tools Used
+## Tools Used
 
 - **Google BigQuery** → SQL data processing, JSON flattening via `UNNEST`
 - **Tableau** → Data visualization and dashboard design
@@ -25,31 +25,31 @@ balance, performance, and class popularity within the first season of *The War W
 
 ---
 
-## 📈 Dashboard Visuals
+## Dashboard Visuals
 
-### 🟦 Alliance vs Horde
+### Alliance vs Horde
 - Pie chart comparing total active players by faction.  
 - Result: **Alliance dominates (≈66%)** compared to **Horde (≈34%)**.
 
-### ⚔️ Top 5 Most Popular Classes
+### Top 5 Most Popular Classes
 - Bar chart showing player distribution among classes.  
 - Top performers: **Paladin, Shaman, Evoker, Priest, Death Knight**.
 
-### 🧩 Top 5 Most Popular Specializations
+### Top 5 Most Popular Specializations
 - Highlights the most played specs in Season TWW1:  
   **Protection Paladin, Augmentation Evoker, Discipline Priest, Enhancement Shaman, Frost DK**.
 
-### ⏱️ Average Run Time per Dungeon
+### Average Run Time per Dungeon
 - Displays the average completion time (in minutes) for each dungeon.  
 - Most runs take between **28–35 minutes**.
 
-### 🧾 Average Score by Dungeon
+### Average Score by Dungeon
 - Compares average Mythic+ scores achieved in each dungeon.  
 - All dungeons maintain similar average scores (~450+).
 
 ---
 
-## 🌍 Dataset Details
+## Dataset Details
 
 | Field | Description |
 |-------|--------------|
@@ -64,7 +64,7 @@ balance, performance, and class popularity within the first season of *The War W
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 
 - The **Alliance** player base is significantly larger (≈66%).  
 - **Protection Paladins** and **Augmentation Evokers** are the most popular specs.  
@@ -73,13 +73,13 @@ balance, performance, and class popularity within the first season of *The War W
 
 ---
 
-## 📜 License
+## License
 
 This project is released under the [MIT License](LICENSE).
 
 ---
 
-### 👤 Author
+### Author
 
 **Oleksii Shevchenko**  
 🔗 [GitHub Profile](https://github.com/Borock1212)
