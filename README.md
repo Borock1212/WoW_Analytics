@@ -60,7 +60,7 @@ balance, performance, and class popularity within the first season of *The War W
 | `dungeon_name` | Dungeon title |
 | `running_time_ms` | Completion time (milliseconds) |
 | `score` | Mythic+ score for the run |
-| `region` | EU or US |
+| `region` | EU and US |
 
 ---
 
