@@ -47,8 +47,9 @@ Flatten Blizzard’s nested data model into a **clean analytical table** where e
    Converted milliseconds to minutes for run durations.
    Mapped roles, classes, and regions.
    Cleaned invalid or null records.
+   
 
- 4. Exporting
+ 5. Exporting
    Saved final results to a new table:
    CREATE OR REPLACE TABLE WoW_DATA.tww_1_season_2000_filtered
    Then exported to .csv for Tableau visualization.
