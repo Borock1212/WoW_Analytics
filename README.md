@@ -14,6 +14,53 @@ each representing a unique Mythic+ character run.
 This dashboard visualizes and compares player behavior across different regions (EU & US) and provides insights into  
 balance, performance, and class popularity within the first season of *The War Within*.
 
+# 🧩 Data Extraction (BigQuery)
+
+This section outlines how the dataset was extracted and prepared in **Google BigQuery** using SQL.
+
+### 📚 Source
+- **Dataset:** `imposing-medium-475102-u0.WOW_DATA.tww_1_season_2000`
+- **Initial volume:** ~4,000 records
+- **After processing (UNNEST):** ~80,000 rows  
+- **Structure:** Nested JSON (runs, rosters, weekly modifiers)
+
+### 🧠 Objective
+Flatten Blizzard’s nested data model into a **clean analytical table** where each record represents a single player’s run, enriched with attributes such as:
+- Dungeon name  
+- Class & specialization  
+- Completion time  
+- Faction and region  
+
+### ⚙️ Key Steps
+
+1. **Filtering & Selection**  
+   Selected relevant fields like region, dungeon, player info, and performance metrics.
+
+2. **Flattening Nested Arrays**  
+   Expanded nested structures using BigQuery’s `UNNEST()` function:
+   ```sql
+   UNNEST(run.roster) AS r,
+   UNNEST(run.weekly_modifiers) AS modifier
+   This increased data granularity from run-level to player-level.
+
+ 3. **Feature Engineering**
+   Converted milliseconds to minutes for run durations.
+   Mapped roles, classes, and regions.
+   Cleaned invalid or null records.
+
+ 4. Exporting
+   Saved final results to a new table:
+   CREATE OR REPLACE TABLE WoW_DATA.tww_1_season_2000_filtered
+   Then exported to .csv for Tableau visualization.
+
+### Outcome
+
+ - Produced an analysis-ready dataset optimized for visualization and performance metrics.
+ - Enabled Tableau dashboards analyzing:
+     - Average run time
+     - Class distribution
+     - Faction ratio
+     - Regional participation
 ---
 
 ## Tools Used
